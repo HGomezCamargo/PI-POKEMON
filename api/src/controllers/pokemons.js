@@ -16,7 +16,7 @@ const createPokemon = async (req, res) =>{
                 weight,
             });
             // console.log(typeArray)
-            // await pokemon.setTypes(typeArray)    
+            // await pokemon.setTypes(typeArray)      
         typesId.forEach(async(el)=>{
             const type = await Type.findByPk(el)
             await pokemon.setTypes(type)

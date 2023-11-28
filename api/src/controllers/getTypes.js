@@ -12,7 +12,7 @@ const getTypes = async (req, res) =>{
             await Type.findOrCreate({where:{name: el.name}})
         })
         
-        return res.status(200).json(types);
+        return res.status(200).send("types cargados");
     } catch (error) {
         return res.status(500).send(error.message)
     }
