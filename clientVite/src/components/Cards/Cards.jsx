@@ -1,21 +1,23 @@
 import Card from "../Card/Card";
-import { useEffect } from "react";
+import style from "./cards.module.css"
 
-const Cards = ({pokemons, pokemonsArray}) => {
-    useEffect(()=>{pokemonsArray()}, [])
-    
+const Cards = ({allPokemons}) => {
+  if (!allPokemons.length) {
+    return <div className='cargando'><h1>Cargando...</h1></div>;
+  }
   return (
-    <div>
-      {pokemons.map((pokemon) => {
+
+    <div className={style.cards}>
+      {allPokemons.map((pokemon) => {
         return (
           <Card
             id={pokemon.id}
             key={pokemon.id}
             name={pokemon.name}
-            type={isNaN(pokemon.id)?pokemon.types:pokemon.type}
+            type={pokemon.types}
             image={pokemon.image}
           />
-        );
+        )
       })}
     </div>
   );

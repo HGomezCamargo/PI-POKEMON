@@ -1,42 +1,83 @@
-#root {
-  max-width: 1280px;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* #root {
+  max-width:1883px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+.nav div input[type=text]{
+  width:243px;
+  height:20px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  background-color:#423737;
+ }
+ 
+ #root a img{
+  z-index:0;
+  position:relative;
+  left:20px;
+ }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
+ #root a .card{
+  display:grid;
+  width:250px;
+  margin-right:0px;
+  height:350px;
+  margin-left:0px;
+  margin-top:0px;
+  padding-right:10px;
+  margin-bottom:0px;
+  padding-left:10px;
+ }
+ 
 
-.card {
-  padding: 2em;
-}
+ #root div p{
+  margin-top:16px;
+ }
+ 
 
-.read-the-docs {
-  color: #888;
-}
+ #root a button{
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+  margin-left:15px;
+  margin-right:15px;
+  margin-top:15px;
+  margin-bottom:15px;
+  border-top-left-radius:10px;
+  border-top-right-radius:10px;
+  border-bottom-left-radius:10px;
+  border-bottom-right-radius:10px;
+  display:inline-flex;
+ }
+ 
+ #root div .pagination{
+  display:flex;
+  transform:translatex(0px) translatey(0px);
+  float:none;
+  flex-wrap:nowrap;
+  justify-content:space-around;
+  margin-left:1px;
+  align-items:normal;
+ }
+  */

@@ -1,3 +1,6 @@
+import "./card.css"
+import { Link } from "react-router-dom";
+import style from "./card.module.css"
 const Card = ({
     id,name,image,type
 }) => {
@@ -5,13 +8,15 @@ const Card = ({
     type.forEach((type)=>{strTypes += type.name + " "})
 
     return(
-        <button>
-            <div className="card">
-                <img src= {image} alt={name} />
-                <h3>{name}</h3>
-                <h3>{strTypes}</h3>
-            </div>
-        </button>
+        <Link to = {`/detail/${name}`} className={style.link}>
+            <button>
+                <div className={style.card}>
+                    <img src= {image} alt={name} />
+                    <h3>{name}</h3>
+                    <h3>{strTypes}</h3>
+                </div>
+            </button>
+        </Link>
     );
 };
 
