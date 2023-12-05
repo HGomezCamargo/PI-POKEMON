@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { ADD_POKEMON, GET_POKEMONS, PAGINATION, GET_TYPES, FILTER_TYPE, RESET, SEARCH, API_DB, ORDER_NAME, ORDER_ATTACK } from './action_types';
+import { ADD_POKEMON, GET_POKEMONS, PAGINATION, GET_TYPES, FILTER_TYPE, RESET, SEARCH, API_DB, ORDER_NAME, ORDER_ATTACK} from './action_types';
 const URL_BASE = 'http://localhost:3001/';
 
 export const  getPokemons = () => {
@@ -55,7 +55,7 @@ export const  getTypes = () => {
             });
 
         }catch(error){
-            throw Error(error.message) 
+            alert(error.response.data.error)
         }
     }
 };
@@ -69,7 +69,7 @@ export const  filterByType = (order) => {
             });
 
         }catch(error){
-            throw Error(error.message) 
+            alert(error.response.data.error)
         }
     }
 };
@@ -108,7 +108,7 @@ export const  filterByApi = (order) => {
             });
 
         }catch(error){
-            throw Error(error.message) 
+            alert(error.response.data.error)
         }
     }
 };
@@ -122,7 +122,7 @@ export const  orderByName = (order) => {
             });
 
         }catch(error){
-            throw Error(error.message) 
+            alert(error.response.data.error) 
         }
     }
 };
@@ -135,7 +135,19 @@ export const  orderByAttack = (order) => {
             });
 
         }catch(error){
-            throw Error(error.message) 
+            alert(error.response.data.error) 
+        }
+    }
+};
+
+export const  postPokemon = (pokemon) => {
+    return async (dispatch) => {
+        try{
+            await axios.post('http://localhost:3001/pokemons', pokemon)
+            alert("Pokemon created.")
+
+        }catch(error){
+            alert(error.response.data.error)
         }
     }
 };

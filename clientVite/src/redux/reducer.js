@@ -115,7 +115,7 @@ function reducer(state = initialState, action) {
         ...state,
         types: action.payload,
       };
-      
+
     case FILTER_TYPE:
       if (action.payload === "default") {
         return {
@@ -194,7 +194,7 @@ function reducer(state = initialState, action) {
           filtered: true,
         };
       }
-    /////////////////////////////////ORDENAMIENTOS POR NOMBRE Y ATAQUE /////////////////////////////////////////////////////////////////////////////
+    //------------------------------------------ORDENAMIENTOS POR NOMBRE Y ATAQUE --------------------------------------
     case ORDER_NAME:
       if (action.payload === "default") {
         return {

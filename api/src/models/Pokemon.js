@@ -29,15 +29,19 @@ module.exports = (sequelize) => {
     },
     defense: {
       type: DataTypes.INTEGER,
+      allowNull: false,
     },
     speed: {
       type: DataTypes.INTEGER,
+      allowNull: true,
     },
     height: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.INTEGER,
+      allowNull: true,
     },
     weight: {
       type: DataTypes.INTEGER,
+      allowNull: true,
     },
   },{timestamps: false});
 };

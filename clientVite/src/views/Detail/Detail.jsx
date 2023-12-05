@@ -36,11 +36,11 @@ const Details = () => {
         <h3>id: {pokemon.id}</h3>
         <h3>Name: {pokemon.name}</h3>
         <h3>Attack: {pokemon.attack}</h3>
-        <h3>Defanse: {pokemon.defense}</h3>
+        <h3>Defense: {pokemon.defense}</h3>
         <h3>Hp: {pokemon.hp}</h3>
-        <h3>speed: {pokemon.speed}</h3>
-        <h3>Height: {pokemon.height}</h3>
-        <h3>Weight: {pokemon.weight}</h3>
+        {!pokemon.speed == 0 && <h3>speed: {pokemon.speed}</h3>}
+        {!pokemon.height == 0 && <h3>Height: {pokemon.height}</h3>}
+        {!pokemon.weight == 0 && <h3>Weight: {pokemon.weight}</h3>}
         <h3>{strTypes}</h3>
         </div>
     </div>
